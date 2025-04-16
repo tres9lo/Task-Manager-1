@@ -26,15 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Notes</h5>
-                        <p class="card-text flex-grow-1">You have <strong>{{ $notesCount }}</strong> notes saved.</p>
-                        <a href="{{ route('notes.index') }}" class="btn btn-primary mt-auto">View Notes</a>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-md-3 mb-4">
                 <div class="card shadow-sm h-100">
                     <div class="card-body d-flex flex-column">
@@ -77,35 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Recent Notes</h5>
-                        <ul class="list-group flex-grow-1">
-                            @foreach($recentNotes as $note)
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    {{ $note->title }}
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Upcoming Reminders</h5>
-                        <ul class="list-group flex-grow-1">
-                            @foreach($upcomingReminders as $reminder)
-                                <li class="list-group-item d-flex justify-content-between align-items-center {{ $reminder->date->isToday() ? 'bg-warning' : ($reminder->date->isPast() ? 'bg-danger' : 'bg-success') }}">
-                                    {{ $reminder->title }}
-                                    <span class="badge bg-primary rounded-pill">{{ $reminder->date->format('M d') }} {{ $reminder->time ? $reminder->time->format('H:i') : '' }}</span>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 @endsection

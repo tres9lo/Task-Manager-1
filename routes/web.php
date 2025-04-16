@@ -2,11 +2,8 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ChecklistItemController;
 use App\Http\Controllers\FileController;
-use App\Http\Controllers\MailController;
-use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectFileController;
-use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\RoutineController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Auth;
@@ -35,8 +32,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('routines/weekly', [RoutineController::class, 'showWeekly'])->name('routines.showWeekly');
     Route::get('routines/monthly', [RoutineController::class, 'showMonthly'])->name('routines.showMonthly');
     Route::resource('files', FileController::class);
-    Route::resource('notes', NoteController::class);
-    Route::resource('reminders', ReminderController::class);
     Route::resource('checklist-items', ChecklistItemController::class);
     Route::get('checklist-items/{checklistItem}/update-status', [ChecklistItemController::class, 'updateStatus'])->name('checklist-items.update-status');
     Route::get('/', function () {
@@ -56,11 +51,9 @@ Route::middleware(['auth'])->group(function () {
             'tasksCount', 
             'routinesCount', 
             'notesCount', 
-            'remindersCount',
             'filesCount', 
             'recentTasks', 
             'todayRoutines', 
-            'recentNotes', 
             'upcomingReminders'
         ));
     })->name('dashboard');

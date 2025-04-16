@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="card-footer text-center">
-                   <p>Developed by: <a class="text-decoration-none text-black" href="https://github.com/arafat-web" target="_blank">Arafat Hossain Ar</a></p>
+                   <p>Developed by: <a class="text-decoration-none text-black" href="https://github.com/tres9l0" target="_blank">99-DEV</a></p>
                 </div>
             </div>
         </div>

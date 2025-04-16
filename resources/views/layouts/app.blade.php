@@ -139,17 +139,7 @@
                     <i class="bi bi-calendar-check"></i> Routines
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('notes*') ? 'active' : '' }}" href="{{ route('notes.index') }}">
-                    <i class="bi bi-sticky"></i> Notes
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('reminders*') ? 'active' : '' }}"
-                    href="{{ route('reminders.index') }}">
-                    <i class="bi bi-bell"></i> Reminders
-                </a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('files*') ? 'active' : '' }}" href="{{ route('files.index') }}">
                     <i class="bi bi-file"></i> Files
@@ -197,7 +187,7 @@
         <footer class="mt-auto py-3 text-center">
             <div class="container">
                 <span class="text-muted">&copy; {{ date('Y') }} Task Manager | Developed by <a
-                        href="https://github.com/arafat-web" target="_blank">Arafat Hossain Ar</a> </span>
+                        href="https://github.com/tres9lo" target="_blank">99-DEV</a> </span>
             </div>
         </footer>
     </div>
